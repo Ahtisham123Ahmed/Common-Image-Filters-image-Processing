@@ -66,6 +66,10 @@ fLaplacian = fspecial("laplacian",0.2) %alpha:  the shape of the Laplacian.  Tak
 imgLaplacian = imfilter(img, fLaplacian);
 %montage({img, imgLaplacian})
 
+%for median filter use to remove noises
+img=imread("noisy.jpg");
+imgMed = medfilt2(img);
+montage({img, imgMed})
 
 
 
